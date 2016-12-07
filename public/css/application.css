@@ -1,0 +1,40 @@
+#content {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+input, textarea {
+  display: block;
+  margin-bottom: 1em;
+  resize: none;
+}
+
+header {
+ padding: .5em 1em;
+}
+header form, span form {
+ display: inline-block;
+}
+
+a {
+  color: darkblue;
+}
+
+#sign-out-link, .delete-link {
+  display: inline-block;
+  border: none;
+  background: none;
+  color: darkblue;
+  font-size: inherit;
+  text-decoration: underline;
+  cursor: pointer;
+  padding: 0;
+}
+
+.control-span {
+  font-size: 75%;
+}

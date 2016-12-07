@@ -1,0 +1,12 @@
+<h2>All the things:</h2>
+<ul>
+  <% @things.each do |thing| %>
+    <li>
+      <a href="/things/<%= thing.id %>"><%= thing.name %></a>
+    </li>
+  <% end %>
+</ul>
+
+<div>
+  <a href="/things/new">Make a new thing</a>
+</div>
