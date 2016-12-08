@@ -21,6 +21,12 @@
 <header>
   <% if current_user %>
     <a href="/users/<%= current_user.id %>"><%= current_user.username %></a>
+    <form action="/logout" method="post">
+      <input type="hidden" name="_method" value="delete" />
+      <input type="submit" class="sign-out-link" value="sign out" />
+    </form>
+  <% else %>
+    <a href="/login">sign in</a>
   <% end %>
 </header>
 <div id="content">

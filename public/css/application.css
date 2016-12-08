@@ -24,7 +24,7 @@ a {
   color: darkblue;
 }
 
-#sign-out-link, .delete-link {
+.sign-out-link, .delete-link {
   display: inline-block;
   border: none;
   background: none;
