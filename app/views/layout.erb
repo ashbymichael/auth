@@ -18,6 +18,11 @@
   <title></title>
 </head>
 <body>
+<header>
+  <% if current_user %>
+    <a href="/users/<%= current_user.id %>"><%= current_user.username %></a>
+  <% end %>
+</header>
 <div id="content">
   <%= yield %>
 </div>

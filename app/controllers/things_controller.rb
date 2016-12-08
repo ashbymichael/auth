@@ -8,6 +8,7 @@ end
 # create
 post '/things' do
   @thing = Thing.new(params)
+  @thing.user = current_user
 
   if @thing.save
     redirect "things/#{@thing.id}"
