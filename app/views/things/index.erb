@@ -3,6 +3,9 @@
   <% @things.each do |thing| %>
     <li>
       <a href="/things/<%= thing.id %>"><%= thing.name %></a>
+      <% if thing.user == current_user %>
+        <%= erb :'/things/_thing_controls', locals: {thing: thing} %>
+      <% end %>
     </li>
   <% end %>
 </ul>
