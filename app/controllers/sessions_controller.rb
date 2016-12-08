@@ -7,7 +7,7 @@ end
 post '/sessions' do
   @user = User.find_by(username: params[:username])
   if @user.password == params[:password]
-    session[:user_id] = @user.id
+    login(@user)
     redirect '/'
   else
     erb :'/sessions/new'

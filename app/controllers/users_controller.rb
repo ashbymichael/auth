@@ -16,6 +16,7 @@ post '/users' do
   @user.password = params[:password]
 
   if @user.save
+    login(@user)
     redirect "users/#{@user.id}"
   else
     # TODO Show the user a descriptive error message
