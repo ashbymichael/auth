@@ -19,7 +19,12 @@ end
 
 # new
 get '/things/new' do
-  erb :'things/new'
+  if current_user
+    erb :'things/new'
+  else
+    #TODO show user a helpful error message
+    redirect 'things'
+  end
 end
 
 # show
