@@ -7,7 +7,7 @@ end
 
 # create
 post '/users' do
-  if params[:password] != params[:confirm_password]
+  if params[:password] != params[:password_confirmation]
     # TODO show the user an error message
     return erb :'users/new'
   end
